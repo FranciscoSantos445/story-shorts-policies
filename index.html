@@ -4,24 +4,53 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Story Shorts Automation</title>
-<meta name="description" content="Story Shorts Automation: a personal tool that turns public text stories into narrated short videos and publishes them to the developer's own channels.">
+<meta name="description" content="Story Shorts Automation turns publicly posted text stories into narrated short vertical videos and publishes them to the developer's own YouTube, TikTok and Instagram accounts.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
-<body style="font-family:sans-serif;max-width:720px;margin:40px auto;padding:0 16px;line-height:1.5">
-<h1>Story Shorts Automation</h1>
-<p>Story Shorts Automation is a personal-use tool run by a single developer. It turns publicly posted text stories into short vertical videos (AI voice narration, word-by-word captions and gameplay footage) and publishes them to the developer's own YouTube, TikTok and Instagram accounts.</p>
+<body style="font-family:sans-serif;max-width:760px;margin:40px auto;padding:0 16px;line-height:1.55;color:#1f2937">
 
-<h2>How it uses Google / YouTube data</h2>
-<p>The app requests the <code>youtube.upload</code> permission only to upload the generated videos to the developer's own YouTube channel. It does not read, store or share any other YouTube or Google user data. Access tokens are stored locally on the developer's computer.</p>
+<header style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+  <img src="icon.png" alt="Story Shorts Automation logo" width="64" height="64" style="border-radius:14px">
+  <div>
+    <h1 style="margin:0">Story Shorts Automation</h1>
+    <nav><a href="./">Home</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-service.html">Terms of Service</a></nav>
+  </div>
+</header>
 
-<h2>Who can use it</h2>
-<p>Only the developer's own accounts are connected. There is no public sign-up and no other users.</p>
+<p>Story Shorts Automation turns publicly posted text stories into short vertical videos and publishes them to the developer's own YouTube, TikTok and Instagram accounts. Every video has AI voice narration, word-by-word captions and background gameplay footage.</p>
 
-<h2>Policies</h2>
+<h2>How it works</h2>
+<ol>
+  <li><strong>Find a story.</strong> The tool collects publicly posted text stories from public web listings.</li>
+  <li><strong>Write the script.</strong> The story is cleaned up and trimmed to fit a short video, usually 30 to 90 seconds.</li>
+  <li><strong>Narrate.</strong> A text-to-speech voice reads the script aloud.</li>
+  <li><strong>Edit the video.</strong> The narration is combined with background footage and word-by-word captions, then rendered as a 1080×1920 vertical video.</li>
+  <li><strong>Review.</strong> The developer watches the finished video before it goes out.</li>
+  <li><strong>Publish.</strong> The video is uploaded to the developer's own accounts through each platform's official API.</li>
+</ol>
+
+<h2>TikTok integration</h2>
+<p>The app uses TikTok <strong>Login Kit</strong> to connect the developer's TikTok account and the <strong>Content Posting API</strong> to publish finished videos to it.</p>
 <ul>
-<li><a href="privacy-policy.html">Privacy Policy</a></li>
-<li><a href="terms-of-service.html">Terms of Service</a></li>
+  <li>Scopes requested: <code>user.info.basic</code> and <code>video.publish</code>.</li>
+  <li>Before each post, the app loads the creator's info from TikTok so the developer can choose the privacy level, the caption, and whether to allow comments, Duet and Stitch.</li>
+  <li>Videos are posted only after the developer reviews and confirms them, and only to the account that authorized the app.</li>
+  <li>The app does not read followers, messages, analytics, or any other user's data.</li>
 </ul>
 
-<p>Contact: fpjds.jardim.net@gmail.com</p>
+<h2>YouTube integration</h2>
+<p>The app requests the <code>youtube.upload</code> permission only to upload the finished videos to the developer's own YouTube channel. It does not read, store or share any other YouTube or Google user data.</p>
+
+<h2>Data and security</h2>
+<p>Access tokens are stored only on the developer's own computer and are sent only to the platform that issued them. Nothing is sold or shared. For full details, read the <a href="privacy-policy.html">Privacy Policy</a>.</p>
+
+<h2>Who can use it</h2>
+<p>This is a personal tool for a single developer. Only that developer's own accounts are connected, and there is no public sign-up.</p>
+
+<footer style="margin-top:40px;border-top:1px solid #e5e7eb;padding-top:12px;font-size:14px">
+  <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-service.html">Terms of Service</a> · Contact: <a href="mailto:fpjds.jardim.net@gmail.com">fpjds.jardim.net@gmail.com</a>
+</footer>
 </body>
 </html>
