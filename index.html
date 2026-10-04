@@ -27,16 +27,16 @@
   <li><strong>Write the script.</strong> The story is cleaned up and trimmed to fit a short video, usually 30 to 90 seconds.</li>
   <li><strong>Narrate.</strong> A text-to-speech voice reads the script aloud.</li>
   <li><strong>Edit the video.</strong> The narration is combined with background footage and word-by-word captions, then rendered as a 1080×1920 vertical video.</li>
-  <li><strong>Review.</strong> The developer watches the finished video before it goes out.</li>
-  <li><strong>Publish.</strong> The video is uploaded to the developer's own accounts through each platform's official API.</li>
+  <li><strong>Write the caption.</strong> A caption and hashtags are generated from the story.</li>
+  <li><strong>Publish.</strong> The video is uploaded automatically to the developer's own accounts through each platform's official API.</li>
 </ol>
 
 <h2>TikTok integration</h2>
 <p>The app uses TikTok <strong>Login Kit</strong> to connect the developer's TikTok account and the <strong>Content Posting API</strong> to publish finished videos to it.</p>
 <ul>
   <li>Scopes requested: <code>user.info.basic</code> and <code>video.publish</code>.</li>
-  <li>Before each post, the app loads the creator's info from TikTok so the developer can choose the privacy level, the caption, and whether to allow comments, Duet and Stitch.</li>
-  <li>Videos are posted only after the developer reviews and confirms them, and only to the account that authorized the app.</li>
+  <li>Before each post, the app queries TikTok's creator info and only uses a privacy level that TikTok allows for the account. Comments, Duet and Stitch are left enabled.</li>
+  <li>Videos are posted only to the account that authorized the app. That account's ID is saved at login and checked before every upload, and the upload is stopped if it doesn't match.</li>
   <li>The app does not read followers, messages, analytics, or any other user's data.</li>
 </ul>
 
